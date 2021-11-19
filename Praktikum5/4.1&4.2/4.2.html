@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+    <style>
+        body {
+    height: 100%;
+    background-color: #f7fffc;
+    min-height: 100% !important;
+    font-family: Poppins, Helvetica, sans-serif;
+}
+
+header>div {
+    background-color: #f2f2f2;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 10% 70% 20%;
+}
+
+.brand-name {
+    font-weight: bold;
+}
+
+header div img {
+    width: 25px;
+}
+
+.brand-name span {
+    vertical-align: top;
+}
+
+.nav-menu {
+    text-align: left;
+}
+
+.nav-cart {
+    text-align: right;
+}
+
+.nav-cart span {
+    vertical-align: top;
+}
+
+section>div {
+    display: grid;
+    grid-template-columns: 75% 25%;
+    padding: 15px;
+}
+
+section>div>div {
+    margin-right: 20px;
+}
+
+section>div>div h3 {
+    padding: 0;
+    margin: 0 0 1em 0;
+}
+
+section>div>div h3 img {
+    width: 60px;
+    float: left;
+    margin-right: 1em;
+}
+
+h3,
+h4 {
+    margin: 0;
+}
+
+section table {
+    width: 100%;
+}
+
+section table td img {
+    width: 20px;
+}
+
+section table td span {
+    vertical-align: top;
+}
+
+aside table {
+    background-color: #bfbfbf;
+    width: 100%;
+    padding: 1em;
+}
+
+footer {
+    padding: 15px;
+}
+
+footer table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+footer table tr {
+    border-top: 1px solid gray;
+}
+
+footer table th {
+    width: 10%;
+}
+
+footer table td:first-child {
+    width: 60%;
+    text-align: left;
+}
+
+footer table td:last-child {
+    width: 30%;
+    text-align: right;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <p class="brand-name">
+                <img src="assets/folder.png" alt="">
+                <span>Site Name</span>
+            </p>
+            <p class="nav-menu">
+                <a href="#">Category 1</a>&nbsp; I
+                <a href="#">Category 2</a>&nbsp; I
+                <a href="#">Category 3</a>&nbsp;
+            </p>
+            <p class="nav-cart">
+                <span><img src="Asset/kaca.png"/></span>
+                <span><img src="Asset/cart.png"/></span>
+                <span><b>Cart (1)</b> </span>
+            </p>
+        </div>
+    </header><br>
+    <section>
+        <div>
+            <div>
+                <h3>
+                    <img src="asset/ceklis.png">
+                    <small>Order 3422385034</small><br> Thank you! Rena
+                </h3>
+                <hr>
+                <p>
+                    Your order is confirmed. <br> We've accepted your order and we're getting it ready.
+                </p>
+                <hr>
+                <h3>Customer Information</h3><br>
+                <table>
+                    <tr>
+                        <td>
+                            <h4>Shipping address</h4>
+                            <p>
+                                <a href="#">Rena Nurhodijah <br>
+                                    Jl. Petojo Binatu Raya, <br>
+                                    Gambir, Jakarta Pusat 10130</a>
+                            </p>
+                        </td>
+                        <td>
+                            <h4>Billing address</h4>
+                            <p>
+                                <a href="#">Rena Nurhodijah<br>
+                                    Jl. Petojo Binatu Raya, <br>
+                                    Gambir, Jakarta Pusat 10130</a>
+
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Shipping method</h4>
+                            <p>
+                                DHL Express (Estimated ship time of 3-6 days)
+                            </p>
+                        </td>
+                        <td>
+                            <h4>Payment method</h4>
+                            <p>
+                                <img src="asset/paypal.png" alt="" width="30px">
+                                <span>Ending in 3217 - $23.60</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <hr>
+            </div>
+            <aside>
+                <table>
+                    <tr align="left">
+                        <th>Summary (1 item)</th>
+                    </tr>
+                    <tr>
+                        <td>Subtotal</td>
+                        <td align="right">$20.00</td>
+                    </tr>
+                    <tr>
+                        <td>Shipping</td>
+                        <td align="right">$2.20</td>
+                    </tr>
+                    <tr>
+                        <td>Ext. Taxes</td>
+                        <td align="right">1.40</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr color="white">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <span>Gift card or discount code</span><br>
+                            <input type="text"><input type="button" value="Apply">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <hr color="white">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th align="left">Total</th>
+                        <th align="right">$23.60</th>
+                    </tr>
+                </table>
+            </aside>
+
+        </div>
+        <footer>
+            <table>
+                <tr>
+                    <th width="10%">
+                        Site name <br>
+                        <img src="asset/paypal.png" alt="" width="30px">
+                        <img src="asset/visa.png" alt="" width="30px">
+                    </th>
+                    <td width="60%">
+                        <p style="text-align: left;">
+                            <a href="#">Category 1</a>&nbsp; I
+                            <a href="#">Category 2</a>&nbsp; I
+                            <a href="#">Category 3</a>&nbsp;
+                        </p>
+                    </td>
+                    <td width="30%">
+                        Stay in touch! Join our newsletter <br>
+                        <input type="email" placeholder="Enter email"><input type="button" value="Subscribe">
+                    </td>
+                </tr>
+            </table>
+        </footer>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 4.1</title>
+    <link rel="stylesheet" href="praktikum.css">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+fieldset {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+}
+
+h1,
+h5 {
+    margin: 0;
+}
+
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main-content div {
+    /* height: 100%;
+    width: 24%; */
+    border: 15px solid white;
+}
+
+.main-content div:nth-child(1) {
+    flex: 1 20%;
+}
+
+.main-content div:nth-child(1) img {
+    width: 100%;
+}
+
+.main-content div:nth-child(2) {
+    flex: 1 50%;
+}
+
+.main-content div:nth-child(3) {
+    flex: 1 30%;
+    text-align: right;
+}
+
+.main-content div:nth-child(4) {
+    flex: 2 100%;
+}
+
+.main-content div:nth-child(5) {
+    flex: 3 30%;
+}
+
+.main-content div:nth-child(5) audio {
+    width: 100%;
+}
+
+.main-content div:nth-child(6) {
+    flex: 3 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main-content div:nth-child(6) img {
+    width: 10%;
+    flex: 1 50%;
+    border: 5px solid white;
+}
+
+.main-content div:nth-child(7) {
+    flex: 3 30%;
+}
+
+.main-content div:nth-child(7) fieldset {
+    margin: 0;
+    width: 100%;
+}
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Directory Profile Page</legend>
+        <div class="main-content">
+            <div>
+                <img src="Asset/rena.png" width="170px">
+            </div>
+            <div>
+                <h1>Rena Nurhodijah</h1>
+                <p>28A Petojo Binatu Raya Road</p>
+                <p>Jakarta Pusat</p>
+                <p>Indonesia</p>
+                <p>Email : <a href="mailto:renanurhodijah46@gmail.com">renanurhodijah46@gmail.com</a></p>
+                <p>Telephone : 0858 7149 5256</p>
+            </div>
+            <div>
+                <h5>Categories</h5>
+                <p>Lorem ipsum</p>
+                <p>dolor sit</p>
+                <p>amet</p>
+                <p>dolor sit</p>
+            </div>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et iste odit temporibus error cumque eaque amet similique modi at sapiente, sit quasi soluta. Vel quibusdam beatae minus, dicta tenetur eligendi.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore blanditiis alias maiores porro perferendis omnis harum pariatur sapiente deleniti quasi. Cupiditate minima corrupti esse tempore non eaque, rerum perferendis libero!
+                </p>
+            </div>
+            <div>
+                <audio src="Asset/Tamed-Dashed.mp3" controls></audio>
+            </div>
+            <div>
+                <img src="Asset/insta.png" >
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Attachment</legend>
+
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+</body>
+
+</html>
