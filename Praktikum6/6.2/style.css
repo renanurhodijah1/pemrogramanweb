@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    flex-direction: column;
+    margin: 1cm;
+    font-size: 30px;
+}
+
+#navbar {
+    display: flex;
+}
+
+#navbar > nav {
+    background-color: pink;
+    padding: 30px;
+    flex: 0.2;
+    min-height: 45vh;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#header > header {
+    padding: 45px 30px 45px;
+    background-color: khaki;
+    flex: 0.1;
+    min-height: 20vh;
+}
+
+#inside {
+    display: flex;
+}
+
+#inside > article {
+    background-color: whitesmoke;
+    padding: 30px;
+    flex: 0.7;
+    min-height: 45vh;
+}
+
+#inside > aside {
+    background-color: aqua;
+    flex: 0.3;
+    padding: 30px;
+    min-height: 45vh;
+}
+
+#header > footer {
+    background-color: khaki;
+    padding: 45px 30px 45px;
+    flex: 0.1;
+    min-height: 20vh;
+}

@@ -1,0 +1,10 @@
+#baris1 {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+#baris2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
