@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 10 No. 3</title>
+</head>
+<body>
+    <!-- Username : admin Password : admin -->
+    <table>
+        <tr>
+            <td>Jam Masuk (0-24)</td>
+            <td><input type="number" id="masuk"></td>
+        </tr>
+        <tr>
+            <td>Jam Keluar (0-24)</td>
+            <td><input type="number" id="keluar"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" id="submit" onclick="hitung();">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Lama</td>
+            <td><input type="text" id="lama" readonly></td>
+        </tr>
+        <tr>
+            <td>Biaya</td>
+            <td><input type="text" id="biaya" readonly></td>
+        </tr>
+    </table>
+</body> 
+<script>
+
+    function hitung(){
+        const masuk = document.getElementById('masuk');
+        const keluar = document.getElementById('keluar');
+        const lama = document.getElementById('lama');
+        const biaya = document.getElementById('biaya');
+
+        let lama_val = keluar.value - masuk.value;
+        var biaya_val = 2000;
+
+        if(lama_val > 2){
+            biaya_val += (lama_val - 2)*1000
+        }
+
+        lama.value = lama_val + " jam";
+        biaya.value = new Intl.NumberFormat().format(biaya_val);
+        
+    }
+</script>
+</html>

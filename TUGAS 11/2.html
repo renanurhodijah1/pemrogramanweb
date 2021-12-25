@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 10 No. 2</title>
+</head>
+<body>
+    <!-- Username : admin Password : admin -->
+    <table>
+        <tr>
+            <td>US Dollar</td>
+            <td><input type="number" id="usd" onkeyup="convert()"></td>
+        </tr>
+        <tr>
+            <td>Rupiah</td>
+            <td><input type="text" id="rupiah" readonly></td>
+        </tr>
+    </table>
+</body> 
+<script>
+    function convert(){
+        const rupiah = document.getElementById('rupiah');
+        const dollar = document.getElementById('usd');
+
+        let kurs = dollar.value*14650;
+
+        rupiah.value =  new Intl.NumberFormat().format(kurs);
+        
+    }
+</script>
+</html>

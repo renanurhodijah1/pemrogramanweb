@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 10 No. 1</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Jari-Jari Lingkaran</td>
+            <td><input type="number" id="jarijari"> cm</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" id="submit" onclick="hitung();">Hitung</button></td>
+        </tr>
+        <tr>
+            <td>Luas</td>
+            <td><input type="number" id="luas" readonly> cm</td>
+        </tr>
+        <tr>
+            <td>Keliling</td>
+            <td><input type="number" id="keliling" readonly> cm</td>
+        </tr>
+    </table>
+</body> 
+<script>
+    function hitung(){
+        const jari = document.getElementById('jarijari');
+        const luas = document.getElementById('luas');
+        const keliling = document.getElementById('keliling');
+
+        let keliling_val = 2*3.14*jari.value;
+        let luas_val = 3.14*jari.value*jari.value;
+
+        keliling.value = keliling_val;
+        luas.value = luas_val;
+        
+    }
+</script>
+</html>
