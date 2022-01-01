@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 12 No. 1</title>
+</head>
+
+<body>
+    <!-- Username : admin Password : admin -->
+    <form id="form">
+        <table>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td><input type="text" id="tb_nama"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="tb_email"></td>
+            </tr>
+            <tr>
+                <td>Jam Keberangkatan</td>
+                <td><input type="text" id="tb_berangkat"></td>
+            </tr>
+            <tr>
+                <td>Tujuan Keberangkatan</td>
+                <td><input type="text" id="tb_tujuan"></td>
+            </tr>
+            <tr>
+                <td>Jumlah Tiket</td>
+                <td><input type="number" id="tb_jumlah"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" id="btn_submit">Add</button></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+<script>
+    const nama = document.getElementById('tb_nama');
+    const email = document.getElementById('tb_email');
+    const berangkat = document.getElementById('tb_berangkat');
+    const tujuan = document.getElementById('tb_tujuan');
+    const jumlah = document.getElementById('tb_jumlah');
+    const form = document.getElementById('form');
+    var error_arr = [];
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        let check = validateInputs();
+        if(!check.includes(1)){
+            alert('Success');
+        }
+    });
+
+    const isValidEmail = email => {
+        const re =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    const validateInputs = () => {
+        const namaValue = nama.value.trim();
+        const emailValue = email.value.trim();
+        const berangkatValue = berangkat.value.trim();
+        const tujuanValue = tujuan.value.trim();
+        const jumlahValue = jumlah.value.trim();
+
+        if (namaValue === '') {
+            setError(nama, ' This field is required');
+            error_arr.push(1);
+        } else if (namaValue.length > 30) {
+            error_arr.push(1);
+            setError(nama, ' Maximum length 30 character');
+        } else {
+            error_arr.push(0);
+        }
+
+        if (emailValue === '') {
+            error_arr.push(1);
+            setError(email, ' This field is required');
+
+        } else if (!isValidEmail(emailValue)) {
+            error_arr.push(1);
+            setError(email, ' Provide a valid email address');
+        } else {
+            error_arr.push(0);
+        }
+
+        if (tujuanValue === '') {
+            error_arr.push(1);
+            setError(tujuan, ' This field is required');
+        } else {
+            error_arr.push(0);
+        }
+
+        if (jumlahValue === '') {
+            error_arr.push(1);
+            setError(jumlah, ' This field is required');
+
+        } else if (jumlahValue > 10 || jumlahValue < 0) {
+            error_arr.push(1);
+            setError(jumlah, ' Please fill with 1-10');
+        } else {
+            error_arr.push(0);
+        }
+
+        if(berangkatValue === ''){
+            error_arr.push(1);
+            setError(berangkat, ' This field is required');
+        }
+
+        return error_arr;
+    };
+
+    const setError = (element, message) => {
+        const inputControl = element.parentElement;
+        inputControl.innerHTML += '<span style="color:red">'+message+'</span>';
+    }
+</script>
+
+</html>

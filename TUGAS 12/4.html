@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 12 No. 4</title>
+    <style>
+        #chatbox {
+            height: 85vh;
+            border: 1px solid black;
+        }
+        #textbox {
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 90px;
+            height: 30px;
+            width: 90vw;
+            font-size: inherit;
+        }
+        #send_button {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 90px;
+            margin-right: 20px;
+            height: 36px;
+            width: 6vw;
+        }
+        #container {
+            height: 70vh;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <fieldset id="chatbox">
+        <legend>Chatbox</legend>
+        <div id="container">
+
+        </div>
+        <form id="form_chatbox" onsubmit="send_chat()" action="#">
+            <input type="text" id="textbox" autofocus>
+            <button type="submit" id="send_button">Send</button>
+        </form>
+    </fieldset>
+</body>
+<script>
+    function send_chat(){
+        const container = document.getElementById('container');
+        const textbox = document.getElementById('textbox');
+
+        container.innerHTML += textbox.value + "<br>";
+        textbox.value = '';
+    }
+</script>
+</html>

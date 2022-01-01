@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 12 No. 3</title>
+</head>
+<body>
+    <!-- Username : admin Password : admin -->
+    <table>
+        <tr>
+            <td>
+                <select id="image_picker" onchange="show_image(this.value);">
+                    <option value="" disabled selected></option>
+                    <option value="1">Coffee Illustration</option>
+                    <option value="2">2022 Illustration</option>
+                    <option value="3">Software Developer Illustration</option>
+                    <option value="4">Study Illustration</option>
+                    <option value="5">Desk Calendar Illustration</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td id="image">
+
+            </td>
+        </tr>
+    </table>
+</body>
+<script>
+    function show_image(id){
+        const container = document.getElementById('image');
+
+        container.innerHTML = '<img src="assets/'+id+'.svg" width="400">';
+    }
+</script>
+</html>

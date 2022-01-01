@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 12 No. 1</title>
+</head>
+<body>
+    <!-- Username : admin Password : admin -->
+    <table>
+        <tr>
+            <td>Username</td>
+            <td><input type="username" id="username"></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" id="password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" id="submit" onclick="login();">Login</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function login(){
+        let username = document.getElementById('username').value;
+        let password = document.getElementById('password').value;
+        if(username == 'admin' && password == 'admin'){
+            alert('Login sukses!');
+            window.location.href = 'login_sukses.html';
+        } else {
+            alert('Login gagal! Silahkan coba lagi');
+            document.getElementById('username').value = '';
+            document.getElementById('password').value = '';
+        }
+    }
+</script>
+</html>
